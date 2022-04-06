@@ -1,42 +1,30 @@
-// const charAmountRange = document.querySelector("#charAmountRange");
-// const charAmountNumber = document.querySelector("#charAmountNumber");
-// const form = document.querySelector("#passGenForm");
+    let pw = document.getElementById("password");
+    let pw2 = document.getElementById("passwordT");
+    passwordT
+   
+   
+   
+   
+function genPassword() {
+let chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let passwordLength = 12;
 
-
-// charAmountNumber.addEventListener('input', syncCharacterAmount)
-// charAmountRange.addEventListener('input', syncCharacterAmount)
-
-// form.addEventListener('submit', e =>{
-//     e.preventDefault()
-//     const password = generatePassword(cha)
-// })
-
-
-
-// function syncCharacterAmount(e){
-//     const value = e.target.value;
-//     charAmountNumber.value = value
-//     charAmountRange.value = value
-
-// }
-
-function getRandomNumber(){
-    return String.fromCharCode(Math.floor(Math.random() * 10)+ 48);
+let password = "";
+for (var i = 0; i <= passwordLength; i++) {
+var randomNumber = Math.floor(Math.random() * chars.length);
+password += chars.substring(randomNumber, randomNumber+1);
 }
-function getRandomUpper(){
-    return String.fromCharCode(Math.floor(Math.random() * 26)+ 65);
-}
-function getRandomLower(){
-    return String.fromCharCode(Math.floor(Math.random() * 26)+ 97);
-}
-function getRandomSymbol(){
-    const symbols = '!@#$%^&*(){}[]=<>/,.' 
-    return symbols [Math.floor(Math.random()* symbols.length)]
+pw.value = password;
 }
 
-console.log(getRandomNumber())
-console.log(getRandomUpper())
-console.log(getRandomLower())
-console.log(getRandomSymbol())
 
 
+
+
+    function copyPassword() {
+  var copyText = document.getElementById("password");
+  copyText.select();
+  copyText.setSelectionRange(0, 999);
+  document.execCommand("copy");
+  
+}
