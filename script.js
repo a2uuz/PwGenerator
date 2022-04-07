@@ -1,6 +1,18 @@
     let pw = document.getElementById("password");
     let pw2 = document.getElementById("passwordT");
-    passwordT
+    let btn = document.querySelector("#button");
+
+    btn.addEventListener("click", ()=>{
+     let chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let passwordLength = 12;
+
+    let passwordT = "";
+    for (var i = 0; i <= passwordLength; i++) {
+    var randomNumber = Math.floor(Math.random() * chars.length);
+    passwordT += chars.substring(randomNumber, randomNumber+1);
+    }
+    pw2.value = passwordT;
+    })
    
    
    
@@ -16,6 +28,8 @@ password += chars.substring(randomNumber, randomNumber+1);
 }
 pw.value = password;
 }
+
+
 
 
 
