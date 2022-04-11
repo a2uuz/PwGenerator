@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Karla", Inter, sans-serif;
+  background-color: #1F2937;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+main {
+  padding: 2rem;
+  width: 550px;
+  line-height: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  color: white;
+  line-height: 3rem;
+}
+
+h1 span {
+  color: #0ee69e;
+}
+
+p {
+  margin-top: 1rem;
+  color: #D5D4D8;
+  font-size: 1.7rem;
+}
+
+.controllers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 3rem 0;
+}
+
+.character-amount-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: .3rem;
+}
+
+.character-amount-container .range-input {
+  width: 7rem;
+}
+
+.character-amount-container .number-input {
+  width: 7rem;
+}
+
+button {
+  padding: .1rem 1rem;
+  background: #0dc98a;
+  border: none;
+  border-radius: .5rem;
+  color: white;
+  font-size: .8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0dc98a7c;
+}
+
+.line {
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.line hr {
+  border: none;
+  border-top: 2px solid #b7b7d4;
+  opacity: 0.1;
+}
+
+input {
+  margin: .5rem;
+  padding: .8rem 1.5rem;
+  background-color: #7dc0ff13;
+  border: none;
+  border-radius: .5rem;
+  color: #0dc98a;
+  font-weight: 800;
+}
+/*# sourceMappingURL=style.css.map */
