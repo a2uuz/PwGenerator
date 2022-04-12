@@ -1,40 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Random Pass Generator</title>
-</head>
-<body>
-    <main>
-        <h1>Generate a <br><span>random password</span></h1>
-        <p>Never use a insecure password again.</p>
-        
-      <div class="controllers">
-         <div class="character-amount-container">
-        <input class="range-input" type="range" min="1" max="50" value="10" id="charAmountRange"> 
-        <input class="number-input" type="number" min="1" max="50" value="10" id="charAmountNumber">
-        </div>
-        <button id="button" class="btn1">Generate passwords</button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <title>Random Pass Generator</title>
+    </head>
+    <body>
+        <main>
+            <h1>
+                Generate a <br />
+                <span>solid password</span>
+            </h1>
+            <p>Never use an insecure password again.</p>
 
-      </div>
-         <div class="line">
-        <hr>
-        </div>
+            <div class="controllers">
+                <div class="character-amount-container">
+                    <span>Step 1</span>
+                    <small>Choose your password length</small>
 
-           <div class="inputs">
-                <input type="text" name="passInputoption1" placeholder="Generate Random Password" id="password" readonly>
-                <!-- <button id="btnCopy"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License)<path d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z"/></svg></button> -->
-                <input type="text" name="passInputoption2" placeholder="Generate Random Password" id="password2" readonly>
-                <!-- <button id="btnCopy2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License)<path d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z"/></svg></button> -->
-                <input type="text" name="passInputoption3" placeholder="Generate Random Password" id="password3" readonly>
-                <!-- <button id="btnCopy3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License)<path d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z"/></svg></button> -->
-                <input type="text" name="passInputoption4" placeholder="Generate Random Password" id="password4" readonly>
-                <!-- <button id="btnCopy4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License)<path d="M320 448v40c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V120c0-13.255 10.745-24 24-24h72v296c0 30.879 25.121 56 56 56h168zm0-344V0H152c-13.255 0-24 10.745-24 24v368c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24V128H344c-13.2 0-24-10.8-24-24zm120.971-31.029L375.029 7.029A24 24 0 0 0 358.059 0H352v96h96v-6.059a24 24 0 0 0-7.029-16.97z"/></svg></button> -->
+                    <input class="range-input" type="range" min="1" max="50" value="10" id="charAmountRange" />
+                    <input class="number-input" type="number" min="1" max="50" value="10" id="charAmountNumber" />
+                </div>
+                <div class="generator-btn">
+                    <span>Step 2</span>
+                    <small>Generate strong password here</small>
+
+                    <button id="button" class="btn1">
+                        <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M8.30064 0.0462736C8.71692 0.177494 9 0.563541 9 1.00001V6.00001L13 6.00001C13.3729 6.00001 13.7148 6.20747 13.887 6.5382C14.0592 6.86893 14.0331 7.268 13.8192 7.57347L6.81924 17.5735C6.56894 17.931 6.11564 18.085 5.69936 17.9537C5.28309 17.8225 5 17.4365 5 17L5 12H1C0.627127 12 0.285222 11.7926 0.113024 11.4618C-0.0591735 11.1311 -0.0330591 10.732 0.180771 10.4265L7.18077 0.426549C7.43107 0.0689788 7.88436 -0.0849466 8.30064 0.0462736Z"
+                                fill="white"
+                            />
+                        </svg>
+                        Generate passwords
+                    </button>
+                </div>
             </div>
-    </main>
-    <script src="./script.js"></script>
-</body>
+            <div class="line">
+                <hr />
+            </div>
+
+            <form class="inputs">
+                <div class="group-1">
+                    <div class="input-shell-1">
+                        <input type="text" name="passInputoption1" placeholder="Generate Random Password" id="password" readonly />
+                        <button type="button" id="btnCopy">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M336 64h-53.88C268.9 26.8 233.7 0 192 0S115.1 26.8 101.9 64H48C21.5 64 0 85.48 0 112v352C0 490.5 21.5 512 48 512h288c26.5 0 48-21.48 48-48v-352C384 85.48 362.5 64 336 64zM192 64c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S160 113.7 160 96C160 78.33 174.3 64 192 64zM272 224h-160C103.2 224 96 216.8 96 208C96 199.2 103.2 192 112 192h160C280.8 192 288 199.2 288 208S280.8 224 272 224z"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="input-shell-2">
+                        <input type="text" name="passInputoption2" placeholder="Generate Random Password" id="password2" readonly />
+                        <button type="button" id="btnCopy2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M336 64h-53.88C268.9 26.8 233.7 0 192 0S115.1 26.8 101.9 64H48C21.5 64 0 85.48 0 112v352C0 490.5 21.5 512 48 512h288c26.5 0 48-21.48 48-48v-352C384 85.48 362.5 64 336 64zM192 64c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S160 113.7 160 96C160 78.33 174.3 64 192 64zM272 224h-160C103.2 224 96 216.8 96 208C96 199.2 103.2 192 112 192h160C280.8 192 288 199.2 288 208S280.8 224 272 224z"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group-2">
+                    <div class="input-shell-3">
+                        <input type="text" name="passInputoption3" placeholder="Generate Random Password" id="password3" readonly />
+                        <button type="button" id="btnCopy3">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M336 64h-53.88C268.9 26.8 233.7 0 192 0S115.1 26.8 101.9 64H48C21.5 64 0 85.48 0 112v352C0 490.5 21.5 512 48 512h288c26.5 0 48-21.48 48-48v-352C384 85.48 362.5 64 336 64zM192 64c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S160 113.7 160 96C160 78.33 174.3 64 192 64zM272 224h-160C103.2 224 96 216.8 96 208C96 199.2 103.2 192 112 192h160C280.8 192 288 199.2 288 208S280.8 224 272 224z"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="input-shell-4">
+                        <input type="text" name="passInputoption4" placeholder="Generate Random Password" id="password4" readonly />
+                        <button type="button" id="btnCopy4">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                <path
+                                    d="M336 64h-53.88C268.9 26.8 233.7 0 192 0S115.1 26.8 101.9 64H48C21.5 64 0 85.48 0 112v352C0 490.5 21.5 512 48 512h288c26.5 0 48-21.48 48-48v-352C384 85.48 362.5 64 336 64zM192 64c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S160 113.7 160 96C160 78.33 174.3 64 192 64zM272 224h-160C103.2 224 96 216.8 96 208C96 199.2 103.2 192 112 192h160C280.8 192 288 199.2 288 208S280.8 224 272 224z"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </main>
+        <script src="./script.js"></script>
+    </body>
 </html>
